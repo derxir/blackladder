@@ -1,11 +1,20 @@
-from flask import Flask
-app = Flask(__name__)
+from empty import Empty
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
 
-@app.route('/a')
-def a():
-    return 'Hello, World!'
+class App(Empty):
+    def configure_views(self):
+        @self.route('/hello')
+        def index():
+            """Use this to make sure your web app is reachable"""
+            return 'It Works'
 
+    def configure_error_handlers(self):
+        """SPA"""
+        pass
+
+
+if __name__ == '__main__':
+    from auto import app
+    from extensions import io
+
+    io.run(app)
