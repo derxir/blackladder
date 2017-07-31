@@ -102,3 +102,6 @@ ENV/
 
 # vagrant
 .vagrant/
+vm_build.log
+/.vscode/
+/.idea/

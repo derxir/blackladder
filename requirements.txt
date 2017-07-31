@@ -6,4 +6,3 @@ flask-migrate==2.0.4
 flask-security==3.0.0
 flask-socketio==2.8.6
 flask-sqlalchemy==2.2
-MySQL-python==1.2.5

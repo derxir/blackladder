@@ -5,7 +5,6 @@ import traceback
 import logging
 
 try:
-    # SPA setup; template_folder ignored;
     app = app_factory(
         'app', config,
         template_folder=None,
