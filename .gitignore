@@ -105,5 +105,5 @@ ENV/
 
 #misc
 vm_build.log
-/.vscode/
-/.idea/
+.vscode/
+.idea/
