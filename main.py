@@ -18,6 +18,13 @@ class App(Empty):
         def index_view():
             return render_template("index.html")
 
+    def configure_database(self):
+        "Database configuration should be set here"
+        # uncomment for sqlalchemy support
+        from database import db
+        db.app = self
+        db.init_app(self)
+
 
 def config_str_to_obj(cfg):
     if isinstance(cfg, basestring):

@@ -18,7 +18,8 @@ class Config(object):
     USE_X_SENDFILE = False
     # DATABASE CONFIGURATION
     # see http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html#database-urls
-    SQLALCHEMY_DATABASE_URI = "mmysql+mysqldb://vagrant:vagrant@localhost:3306/blackladder"
+    # SQLALCHEMY_DATAB?ASE_URI = "mmysql+mysqldb://vagrant:vagrant@localhost:3306/blackladder"
+    SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/%s_dev.sqlite" % project_name
 
     # DEBUG mode only!
     SQLALCHEMY_ECHO = DEBUG
@@ -56,7 +57,7 @@ class Config(object):
     # see example/ for reference
     # ex: BLUEPRINTS = ['blog']  # where `blog` is a Blueprint instance
     # ex: BLUEPRINTS = [('blog', {'url_prefix': '/myblog'})]  # where `blog` is a Blueprint instance
-    BLUEPRINTS = []
+    BLUEPRINTS = ['apps']
 
 
 # config class for development environment
