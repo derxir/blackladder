@@ -30,8 +30,9 @@ apt-get -y install python3-pip
 sudo apt-get install python-pip python-dev libmysqlclient-dev MySQL-python >> /vagrant/vm_build.log 2>&1
 sudo pip3 install flask 
 
-export FLASK_APP=/vagrant/app.py
-export FLASK_DEBUG=1
+export FLASK_APP=/vagrant/main.py
+# export FLASK_DEBUG=1
 cd /vagrant
-pip3 install -r requirements.txt
+pip3 install -r requirements/dev.txt
 # python3 -m flask run --host=0.0.0.0
+# python3 manage.py runserver
