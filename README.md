@@ -4,6 +4,7 @@
 2. install virtualbox
 3. vagrant up --provision
 4. setup pycharm remote debugger
+
 or 
 4. vagrant ssh
 5. cd /vagrant
